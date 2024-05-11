@@ -18,26 +18,30 @@ class MainActivity : AppCompatActivity() {
         bindingClass.btEnter.setOnClickListener {
 
             val resultValue = bindingClass.tvInput.text.toString()
-
+            bindingClass.imPhoto.visibility = View.VISIBLE
             when (resultValue) {
                 Constance.INGENEER -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
                     val tempText = "Получите ${Constance.INGENEER_SUELDO}"
-                    bindingClass.tvResult.text =
-                        if (bindingClass.edPassword.text.toString() == Constance.INGENEER_PASSWORD) {
-                            tempText
-                        } else {
-                            "Неверный пароль"
-                        }
+
+                    if (bindingClass.edPassword.text.toString() == Constance.INGENEER_PASSWORD) {
+                        bindingClass.tvResult.text = tempText
+                        bindingClass.imPhoto.setImageResource(R.drawable.andrey)
+                    } else {
+                        "Неверный пароль"
+                        bindingClass.imPhoto.setImageResource(R.drawable.ku)
+                    }
                 }
 
                 Constance.DIRECTOR -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
                     val tempText = "Получите ${Constance.DVORNIK_SUELDO}"
-                    bindingClass.tvResult.text =
+
                         if (bindingClass.edPassword.text.toString() == Constance.DIRECTOR_PASSWORD) {
-                            tempText
+                            bindingClass.tvResult.text =tempText
+                            bindingClass.imPhoto.setImageResource(R.drawable.egor)
                         } else {
+                            bindingClass.imPhoto.setImageResource(R.drawable.ku)
                             "Неверный пароль"
                         }
                     bindingClass.tvResult.text = tempText
@@ -45,11 +49,13 @@ class MainActivity : AppCompatActivity() {
 
                 Constance.DVORNIK -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
-                    val tempText = "Получите ${Constance.DIRECTOR_SUELDO}"
-                    bindingClass.tvResult.text =
+                    val tempText = "Получите ${Constance.DVORNIK_SUELDO}"
+
                         if (bindingClass.edPassword.text.toString() == Constance.DVORNIK_PASSWORD) {
-                            tempText
+                            bindingClass.tvResult.text =tempText
+                            bindingClass.imPhoto.setImageResource(R.drawable.sergey)
                         } else {
+                            bindingClass.imPhoto.setImageResource(R.drawable.ku)
                             "Неверный пароль"
                         }
                     bindingClass.tvResult.text = tempText

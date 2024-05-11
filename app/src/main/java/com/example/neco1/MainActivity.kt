@@ -22,22 +22,40 @@ class MainActivity : AppCompatActivity() {
             when (resultValue) {
                 Constance.INGENEER -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
-                    val tempText="Получите ${Constance.INGENEER_SUELDO}"
-                    bindingClass.tvResult.text = tempText
+                    val tempText = "Получите ${Constance.INGENEER_SUELDO}"
+                    bindingClass.tvResult.text =
+                        if (bindingClass.edPassword.text.toString() == Constance.INGENEER_PASSWORD) {
+                            tempText
+                        } else {
+                            "Неверный пароль"
+                        }
                 }
 
-                Constance.DIRECTOR-> {
+                Constance.DIRECTOR -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
-                    val tempText="Получите ${Constance.DVORNIK_SUELDO}"
-                    bindingClass.tvResult.text =tempText
+                    val tempText = "Получите ${Constance.DVORNIK_SUELDO}"
+                    bindingClass.tvResult.text =
+                        if (bindingClass.edPassword.text.toString() == Constance.DIRECTOR_PASSWORD) {
+                            tempText
+                        } else {
+                            "Неверный пароль"
+                        }
+                    bindingClass.tvResult.text = tempText
                 }
 
                 Constance.DVORNIK -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
-                    val tempText="Получите ${Constance.DIRECTOR_SUELDO}"
-                    bindingClass.tvResult.text =tempText
+                    val tempText = "Получите ${Constance.DIRECTOR_SUELDO}"
+                    bindingClass.tvResult.text =
+                        if (bindingClass.edPassword.text.toString() == Constance.DVORNIK_PASSWORD) {
+                            tempText
+                        } else {
+                            "Неверный пароль"
+                        }
+                    bindingClass.tvResult.text = tempText
                 }
-                else ->{
+
+                else -> {
                     bindingClass.tvResult.visibility = View.VISIBLE
                     bindingClass.tvResult.text = "Нет такого работника"
 

@@ -6,8 +6,8 @@
     android:layout_height="match_parent">
 
     <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
+        android:id="@+id/bAvatar"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
@@ -23,9 +23,10 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
         android:visibility="invisible"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/i2"
-        tools:layout_editor_absoluteX="131dp" />
+        app:srcCompat="@drawable/i2" />
 
     <EditText
         android:id="@+id/edLogin"
@@ -37,7 +38,7 @@
         android:inputType="text"
         app:layout_constraintEnd_toEndOf="@+id/imageView"
         app:layout_constraintStart_toStartOf="@+id/imageView"
-        app:layout_constraintTop_toBottomOf="@+id/button" />
+        app:layout_constraintTop_toBottomOf="@+id/bAvatar" />
 
     <EditText
         android:id="@+id/edPass"
@@ -52,7 +53,7 @@
         app:layout_constraintTop_toBottomOf="@+id/edLogin" />
 
     <EditText
-        android:id="@+id/edName"
+        android:id="@+id/edName1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
@@ -73,9 +74,9 @@
         android:hint="@string/name2"
         android:inputType="text"
         android:visibility="visible"
-        app:layout_constraintEnd_toEndOf="@+id/edName"
-        app:layout_constraintStart_toStartOf="@+id/edName"
-        app:layout_constraintTop_toBottomOf="@+id/edName" />
+        app:layout_constraintEnd_toEndOf="@+id/edName1"
+        app:layout_constraintStart_toStartOf="@+id/edName1"
+        app:layout_constraintTop_toBottomOf="@+id/edName1" />
 
     <EditText
         android:id="@+id/edName3"

@@ -2,17 +2,15 @@ package com.example.neco1
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.example.neco1.databinding.ActivityTestBinding
+import com.example.neco1.databinding.ActSigninupBinding
 
 
-class TestActivity:AppCompatActivity() {
-    lateinit var bindingClass: ActivityTestBinding
+class SigninupAct : AppCompatActivity() {
+    lateinit var bindingClass: ActSigninupBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        bindingClass = ActivityTestBinding.inflate(layoutInflater)
+        bindingClass = ActSigninupBinding.inflate(layoutInflater)
 
         setContentView(bindingClass.root)
-
-
     }
 }

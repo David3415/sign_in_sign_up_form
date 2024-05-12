@@ -1,4 +1,8 @@
 <resources>
     <string name="app_name">App</string>
-    <string name="hello">hello</string>
+    <string name="ok">translitable</string>
+    <string name="hello">Hello</string>
+    <string name="sign_in" translatable="false">Sign_in</string>
+    <string name="sign_up" translatable="false">Sign_up</string>
+    <string name="avatar" translatable ="false">Avatar</string>
 </resources>

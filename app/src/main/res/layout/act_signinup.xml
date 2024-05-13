@@ -11,17 +11,19 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="20dp"
+        android:onClick="onClickAvatar"
         android:text="@string/avatar"
         app:layout_constraintBottom_toTopOf="@+id/edLogin"
         app:layout_constraintEnd_toEndOf="@+id/edLogin"
         app:layout_constraintStart_toStartOf="@+id/edLogin"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
+        app:layout_constraintTop_toBottomOf="@+id/imAvatar" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imAvatar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="50dp"
+        android:onClick="onClickAvatar"
         android:visibility="invisible"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -36,8 +38,8 @@
         android:ems="10"
         android:hint="@string/login"
         android:inputType="text"
-        app:layout_constraintEnd_toEndOf="@+id/imageView"
-        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="@+id/imAvatar"
+        app:layout_constraintStart_toStartOf="@+id/imAvatar"
         app:layout_constraintTop_toBottomOf="@+id/bAvatar" />
 
     <EditText
@@ -96,6 +98,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
+        android:onClick="onClickDone"
         android:text="@string/done"
         app:layout_constraintEnd_toEndOf="@+id/edPass"
         app:layout_constraintStart_toStartOf="@+id/edPass"

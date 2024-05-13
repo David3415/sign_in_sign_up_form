@@ -25,7 +25,17 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-        if(requestCode==Constance.REQUEST_CODE_SIGN_IN){
+        if (requestCode == Constance.REQUEST_CODE_SIGN_IN) {
+            val l = data?.getStringExtra(Constance.LOGIN)
+            val p = data?.getStringExtra(Constance.PASS)
+            if (login == l && pass == p) {
+                bindingClass.imAvatar.setImageResource(avatarImgId)
+                val textInfo = "$name1 $name2 $name3"
+                bindingClass.tvInfo.text = textInfo
+            } else {
+                bindingClass.tvInfo.text = "Такого акк не сущ"
+            }
+        } else if (requestCode == Constance.REQUEST_CODE_SIGN_UP) {
 
         }
     }
@@ -40,6 +50,10 @@ class MainActivity : AppCompatActivity() {
         val intent = Intent(this, SigninupAct::class.java)
         intent.putExtra(Constance.SIGN_STATE, Constance.SIGN_UP_STATE)
         startActivityForResult(intent, Constance.REQUEST_CODE_SIGN_UP)
+    }
+
+    fun onClicAvatar(view: View) {
+
     }
 }
 

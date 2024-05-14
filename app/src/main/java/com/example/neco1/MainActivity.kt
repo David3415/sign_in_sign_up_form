@@ -25,18 +25,36 @@ class MainActivity : AppCompatActivity() {
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
+
         if (requestCode == Constance.REQUEST_CODE_SIGN_IN) {
             val l = data?.getStringExtra(Constance.LOGIN)
             val p = data?.getStringExtra(Constance.PASS)
             if (login == l && pass == p) {
+                bindingClass.imAvatar.visibility=View.VISIBLE
                 bindingClass.imAvatar.setImageResource(avatarImgId)
                 val textInfo = "$name1 $name2 $name3"
                 bindingClass.tvInfo.text = textInfo
+                bindingClass.bHide.visibility = View.GONE
+                bindingClass.bExit.text = "Выйти"
             } else {
+
+                bindingClass.imAvatar.visibility=View.VISIBLE
+                bindingClass.imAvatar.setImageResource(R.drawable.dula1)
                 bindingClass.tvInfo.text = "Такого акк не сущ"
             }
         } else if (requestCode == Constance.REQUEST_CODE_SIGN_UP) {
-
+            bindingClass.imAvatar.visibility=View.VISIBLE
+            login = data?.getStringExtra(Constance.LOGIN)!!
+            pass = data?.getStringExtra(Constance.PASS)!!
+            name1 = data?.getStringExtra(Constance.NAME1)!!
+            name2 = data?.getStringExtra(Constance.NAME2)!!
+            name3 = data?.getStringExtra(Constance.NAME3)!!
+            avatarImgId = data.getIntExtra(Constance.AVATAR_ID, 0)
+            bindingClass.imAvatar.setImageResource(avatarImgId)
+            val textInfo = "$name1 $name2 $name3"
+            bindingClass.tvInfo.text = textInfo
+            bindingClass.bHide.visibility = View.GONE
+            bindingClass.bExit.text = "Выйти"
         }
     }
 

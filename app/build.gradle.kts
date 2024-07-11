@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.neco1"
+    namespace = "com.example.sign_in_sign_up_form"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.example.neco1"
+        applicationId = "com.example.sign_in_sign_up_form"
         minSdk = 24
         targetSdk = 34
         versionCode = 1

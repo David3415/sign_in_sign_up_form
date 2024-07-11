@@ -1,12 +1,11 @@
-package com.example.neco1
+package com.example.sign_in_sign_up_form
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
-import com.example.neco1.constance.Constance
-import com.example.neco1.databinding.ActivityMainBinding
+import com.example.sign_in_sign_up_form.constance.Constance
+import com.example.sign_in_sign_up_form.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var bindingClass: ActivityMainBinding

@@ -1,4 +1,4 @@
-package com.example.neco1.constance
+package com.example.sign_in_sign_up_form.constance
 
 object Constance {
     const val SIGN_IN_STATE = "sign_in"

@@ -1,4 +1,4 @@
-package com.example.neco1
+package com.example.sign_in_sign_up_form
 
 import org.junit.Test
 

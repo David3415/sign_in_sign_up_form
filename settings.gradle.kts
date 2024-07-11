@@ -19,5 +19,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "Neco1"
+rootProject.name = "sign_in_sign_up_form"
 include(":app")

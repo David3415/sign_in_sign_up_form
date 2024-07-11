@@ -1,12 +1,13 @@
-package com.example.neco1
+package com.example.sign_in_sign_up_form
 
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.isVisible
-import com.example.neco1.constance.Constance
-import com.example.neco1.databinding.ActSigninupBinding
+import com.example.sign_in_sign_up_form.R
+import com.example.sign_in_sign_up_form.constance.Constance
+import com.example.sign_in_sign_up_form.databinding.ActSigninupBinding
 
 
 class SigninupAct : AppCompatActivity() {
